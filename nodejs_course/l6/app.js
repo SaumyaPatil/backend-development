@@ -52,5 +52,8 @@ const fs = require("fs");
 //pipe - to transfer data from one file to another
 const readStream = fs.createReadStream("input.txt");
 const writeStream = fs.createWriteStream("output.txt");
+
+//Analogy of water being fetched in fields through engine
 readStream.pipe(writeStream);
 
+//How does a browser work? - How web applications work?
