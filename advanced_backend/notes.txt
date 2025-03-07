@@ -1,0 +1,6 @@
+We will learn docker and redis that are latest in industry.
+
+REST API - create, CRUD operation, MongoDB database kaise use kr sakte ho, testing APIs using postman, and we will docerise/containerise our mern application using docker, using redis we can speedup the response time of APIs
+In previous video we learnt how internet works, nodejs, creating apis in express
+
+ 
