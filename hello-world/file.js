@@ -1,5 +1,11 @@
 const fs = require('fs');
 
+//Gives info about our OS
+const os = require('os');
+
+//What ever result it gives means I can take the max thread size to this number
+console.log(os.cpus().length);
+
 //Sync...
 // fs.writeFileSync("./test.txt", "Hey there");
 
@@ -45,6 +51,7 @@ const fs = require('fs');
 
  
 //This is blocking request
+//It blocks the thread and returns us a request.
 console.log("1");
 const result = fs.readFileSync("contacts.txt", "utf-8");
 console.log(result);
@@ -52,6 +59,7 @@ console.log(result);
 console.log("2");
 
 //This is non blocking request
+//It gives async results through a callback
 console.log("1");
 
 fs.readFile("contacts.txt", "utf-8", (err, res) => {
@@ -60,3 +68,6 @@ fs.readFile("contacts.txt", "utf-8", (err, res) => {
 
 console.log("2");
 
+// Default thread pool size = 4
+// Max? - Jitna tum CPU rent out kr rhe ho usme kitne cores hai uspe depend krta hai kitne threads banaane hai karke
+// If you have 8 core CPU max threads can be 8
